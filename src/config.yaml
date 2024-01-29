@@ -1,0 +1,45 @@
+project:
+  name: Alignoth
+  version: 0.11.0
+  copyright: 2024, Koesterlab
+  authors: Felix Wiegand, Johannes Koester
+
+color: blue
+logo:
+  dark: alignoth-white.svg # add a logo
+  light: alignoth.svg # add a logo
+
+repo: 
+  name: alignoth/alignoth
+  contributors:
+    skip:
+      - github-actions[bot]
+      - dependabot[bot]
+
+header:
+  logo: alignoth-logo-white.svg
+  name: Alignoth
+  links:
+    - text: Github
+      url: https://github.com/alignoth
+
+hero:
+  img: alignoth-logo-white.svg # add a logo
+  statements:
+    - Create portable alignment plots from bam files
+  links: 
+    - url: http://htmlpreview.github.io/?https://github.com/alignoth/alignoth/blob/main/examples/plot.html
+      text: Check Live Demo
+
+features:
+  - title: Easily configurable interactive reports
+    desc: |
+      Alignoth is a command line tool written in Rust for creating alignment plots from bam files. Plots are generated with vega-lite and can be embedded into html as well and standalone png, pdf or svg files using vega command line tools for rendering.
+    img: bam-plot.svg
+    img-width: 40vw
+    url: http://htmlpreview.github.io/?https://github.com/alignoth/alignoth/blob/main/examples/plot.html
+      
+docs:
+  src: docs
+  links:
+    Homepage: https://alignoth.github.io
