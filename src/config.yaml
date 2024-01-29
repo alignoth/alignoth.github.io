@@ -4,7 +4,7 @@ project:
   copyright: 2024, Koesterlab
   authors: Felix Wiegand, Johannes Koester
 
-color: blue
+color: red
 logo:
   dark: alignoth-white.svg # add a logo
   light: alignoth.svg # add a logo
