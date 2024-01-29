@@ -1,0 +1,31 @@
+name: build-and-deploy
+
+on:
+  push:
+    branches:
+      - main
+    workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    defaults:
+      run:
+        shell: bash -el {0}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: locosopa
+        uses: koesterlab/locosopa@main
+        with:
+          config: src/config.yaml
+          path: build
