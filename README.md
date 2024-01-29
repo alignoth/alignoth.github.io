@@ -1,3 +1,3 @@
-# datavzrd.github.io
+# alignoth.github.io
 
-Datavzrd homepage
+Alignoth homepage
