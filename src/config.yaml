@@ -36,7 +36,7 @@ features:
     desc: |
       Alignoth is a command line tool written in Rust for creating alignment plots from bam files. Plots are generated with vega-lite and can be embedded into html as well and standalone png, pdf or svg files using vega command line tools for rendering.
     img: bam-plot.svg
-    img-width: 40vw
+    img-width: min(30vw, 550px)
     url: http://htmlpreview.github.io/?https://github.com/alignoth/alignoth/blob/main/examples/plot.html
       
 docs:
