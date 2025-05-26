@@ -6,17 +6,8 @@ A tool for creating alignment plots from bam files. The generated `vega-lite <ht
 An example of a generated plot can be seen `here <http://htmlpreview.github.io/?https://github.com/koesterlab/alignoth/blob/main/examples/plot.html>`_.
 The name alignoth is derived from the visualized **align**ments combined with the star **alioth** (usage of vega plots).
 
-************
-Introduction
-************
-
-Tabular datasets, prevalent across diverse scientific fields such as biology, physics, economics, and environmental science, stand as the primary outcomes of scientific investigations.
-Datavzrd aims to create a solution for reporting this data in a sharable format that is highly customizable and easy to use with simple configuration using the yaml syntax.
-
-Example Report
-==============
-
-Explore Datavzrd's capabilities by checking out an `example report online <https://datavzrd.github.io/datavzrd/index.html>`_ along with its corresponding `config file <https://github.com/datavzrd/datavzrd/tree/main/.examples/example-config.yaml>`_.
+Alignoth supports an interactive mode that can be activated by simply executing it without any arguments (i.e. ``alignoth``).
+This launches a wizard that guides you through selecting input files, defining the region of interest, and choosing between an interactive HTML output or a Vega-Lite specification.
 
 .. toctree::
     installation
