@@ -6,6 +6,12 @@ Usage
 
 .. code-block:: bash
 
+    alignoth
+
+To activate the interactive mode guiding you through the process of creating an alignment plot.
+
+.. code-block:: bash
+
     alignoth -b path/to/my.bam -r path/to/my/reference.fa -g chr1:200-300 > plot.vl.json
 
 To directly generate a plot in svg, png or pdf format we advice using the `vega-cli <https://vega.github.io/vega/usage/#cli>`_ and `vega-lite-cli <https://vega.github.io/vega-lite/usage/compile.html#cli>`_ packages:
