@@ -47,4 +47,4 @@ docs:
     Homepage: https://alignoth.github.io
 
 assets:
-  - src/preview.html
+  - preview.html
