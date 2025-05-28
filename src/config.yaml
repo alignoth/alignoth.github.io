@@ -24,7 +24,9 @@ header:
       url: https://github.com/alignoth
 
 hero:
-  img: alignoth-logo-white.svg # add a logo
+  img:
+    dark: alignoth-logo-white.svg
+    light: alignoth-logo-white.svg
   statements:
     - Create portable alignment plots from bam files
   links: 
