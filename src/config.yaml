@@ -45,3 +45,6 @@ docs:
   src: docs
   links:
     Homepage: https://alignoth.github.io
+
+assets:
+  - src/preview.html
