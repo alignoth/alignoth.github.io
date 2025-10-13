@@ -6,12 +6,12 @@ There are multiple ways to install alignoth:
 
 Bioconda
 ~~~~~~~~
-Rust-Bio-Tools is available via `Bioconda <https://bioconda.github.io>`_.
+Alignoth is available via `Bioconda <https://bioconda.github.io>`_.
 With Bioconda set up, installation is as easy as:
 
 .. code-block:: bash
 
-    conda install alignoth
+    conda install alignoth -c bioconda
 
 Cargo
 ~~~~~
