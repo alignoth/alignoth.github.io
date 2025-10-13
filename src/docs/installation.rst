@@ -4,14 +4,22 @@ Installation Guide
 
 There are multiple ways to install alignoth:
 
+Pixi
+~~~~
+Alignoth can be easily installed globally using `pixi <https://pixi.sh/>`_:
+
+.. code-block:: bash
+    pixi global install alignoth
+
 Bioconda
 ~~~~~~~~
 Alignoth is available via `Bioconda <https://bioconda.github.io>`_.
 With Bioconda set up, installation is as easy as:
 
 .. code-block:: bash
+    conda install alignoth -c conda-forge -c bioconda -c nodefaults
 
-    conda install alignoth -c bioconda
+Pay attention to the correct channel ordering for the installation.
 
 Cargo
 ~~~~~
