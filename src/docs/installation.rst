@@ -33,8 +33,19 @@ If the `Rust <https://www.rust-lang.org/tools/install>`_ compiler and associated
 
 Docker
 ~~~~~~
+Alignoth is also available as a prebuilt container through `Biocontainers <https://biocontainers.pro/tools/alignoth>`_.  
+This image provides a ready-to-use environment with all dependencies preinstalled, making it convenient for users who prefer containerized workflows or encounter issues with native installations.
 
-Bioconatiners also offer `ready-to-pull containers <https://biocontainers.pro/tools/alignoth>` with alignoth already installed. 
+To pull and run the image directly from Quay.io, use:
+
+.. code-block:: bash
+
+    docker pull quay.io/biocontainers/alignoth:<version>
+    docker run --rm quay.io/biocontainers/alignoth:<version> alignoth --help
+
+Replace ``<version>`` with the desired release tag (e.g., ``0.16.4--h1520f10_0``).  
+A list of all available versions can also be found on the `Biocontainers page <https://biocontainers.pro/tools/alignoth>`_.
+
 
 Source
 ~~~~~~
