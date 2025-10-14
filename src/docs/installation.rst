@@ -9,6 +9,7 @@ Pixi
 Alignoth can be easily installed globally using `pixi <https://pixi.sh/>`_:
 
 .. code-block:: bash
+
     pixi global install alignoth
 
 Bioconda
@@ -17,6 +18,7 @@ Alignoth is available via `Bioconda <https://bioconda.github.io>`_.
 With Bioconda set up, installation is as easy as:
 
 .. code-block:: bash
+
     conda install alignoth -c conda-forge -c bioconda -c nodefaults
 
 Pay attention to the correct channel ordering for the installation.
@@ -28,6 +30,11 @@ If the `Rust <https://www.rust-lang.org/tools/install>`_ compiler and associated
 .. code-block:: bash
 
     cargo install alignoth
+
+Docker
+~~~~~~
+
+Bioconatiners also offer `ready-to-pull containers <https://biocontainers.pro/tools/alignoth>` with alignoth already installed. 
 
 Source
 ~~~~~~
