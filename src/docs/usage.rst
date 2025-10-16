@@ -55,7 +55,15 @@ Arguments
      -
    * - highlight
      - -h
-     - Interval or single base position that will be highlighted in the visualization. Example: 132400-132500 or 132440
+     - Named intervals or single base positions that will be highlighted in the visualization. Example: myinterval:132400-132500 or myvariant:132440
+     -
+   * - vcf
+     - -v
+     - Path to a VCF file. Variants from the VCF file will be highlighted in the resulting plot similar to the highlight option.
+     -
+   * - bed
+     - 
+     - Path to a BED file. Regions from the BED file will be highlighted in the resulting plot similar to the highlight option.
      -
    * - plot-all
      - -p
