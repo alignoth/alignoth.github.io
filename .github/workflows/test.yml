@@ -12,6 +12,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install stable toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+            toolchain: stable
+
+      - name: Install alignoth
+        run: cargo install alignoth
+
+      - name: Checkout alignoth repo
+        uses: actions/checkout@v4
+        with:
+          repository: alignoth/alignoth
+          path: alignoth
+
+      - name: Build preview html
+        run: alignoth -b alignoth/tests/sample_3/NA12878.bam -r alignoth/tests/sample_3/ref.fa -g 1:250-500 --html --max-read-depth 40 > src/preview.html
+
       - name: locosopa
         uses: koesterlab/locosopa@main
         with:

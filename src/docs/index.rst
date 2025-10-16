@@ -12,3 +12,4 @@ This launches a wizard that guides you through selecting input files, defining t
 .. toctree::
     installation
     usage
+    embedding
