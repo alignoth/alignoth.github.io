@@ -41,7 +41,7 @@ jobs:
           path: alignoth
 
       - name: Build preview html
-        run: alignoth -b alignoth/tests/sample_3/NA12878.bam -r alignoth/tests/sample_3/ref.fa -v alignoth/tests/sample_3/1257A.vcf -g 1:250-500 --html --max-read-depth 40 > src/preview.html
+        run: alignoth -b alignoth/tests/sample_3/NA12878.bam -r alignoth/tests/sample_3/ref.fa -v alignoth/tests/sample_3/1257A.vcf.gz -g 1:250-500 --html --max-read-depth 40 > src/preview.html
       
       - name: locosopa
         uses: koesterlab/locosopa@main
