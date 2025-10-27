@@ -36,24 +36,24 @@ Next, a minimal Datavzrd configuration for embedding an Alignoth view looks like
 
 .. code-block:: yaml
 
-datasets:
-  sample.coverage:
-    path: output/sample.coverage.tsv
-    separator: "\t"
-  sample.reference:
-    path: output/sample.reference.tsv
-    separator: "\t"
-  sample.reads:
-    path: output/sample.reads.tsv
-    separator: "\t"
-views:
-  sample:
-      datasets:
-          reads: sample.reads
-          reference: sample.reference
-          coverage: sample.coverage
-      render-plot:
-          spec-path: "output/sample.vl.json"
+    datasets:
+      sample.coverage:
+        path: output/sample.coverage.tsv
+        separator: "\t"
+      sample.reference:
+        path: output/sample.reference.tsv
+        separator: "\t"
+      sample.reads:
+        path: output/sample.reads.tsv
+        separator: "\t"
+    views:
+      sample:
+          datasets:
+              reads: sample.reads
+              reference: sample.reference
+              coverage: sample.coverage
+          render-plot:
+              spec-path: "output/sample.vl.json"
 
 
 Embedding in Snakemake
