@@ -8,8 +8,53 @@ Alignoth produces fully self-contained HTML files that can be easily embedded in
 This allows users to integrate alignment visualizations directly into existing analysis pipelines, documentation,
 or automated reporting systems such as Snakemake or Datavzrd.
 
-Below we demonstrate how to embed Alignoth visualizations within a Snakemake report.  
-Additional examples for Datavzrd and other tools will be added in future updates.
+Below we demonstrate how to embed Alignoth visualizations within a Datavzrd and Snakemake report.  
+
+Embedding in Datavzrd
+=====================
+
+`Datavzrd <https://datavzrd.github.io>`_ allows embedding Vega-Lite plots via its `render-plot` keyword.
+This enables embedding one or more Alignoth plots directly into a Datavzrd report.
+These views (e.g. per variant or gene of interest) can be linked to an overview table via Datavzrd's `linking feature <https://datavzrd.github.io/docs/configuration.html#links>`_.
+Technically embedding the alignment views can be achieved by calling Alignoth asking for a tsv formatted output using `-f tsv` and an output directory `-o output/` for the datasets and Vega-Lite spec files like this:
+
+.. code-block:: bash
+
+    alignoth -b sample.bam -g chr1:1000-1500 -r reference.fa -o output/ -f tsv
+
+This command will create the following directory structure:
+
+.. code-block:: bash
+
+    output/
+    ├── sample.coverage.tsv
+    ├── sample.reads.tsv
+    ├── sample.reference.tsv
+    ├── sample.vl.json
+
+Next, a minimal Datavzrd configuration for embedding an Alignoth view looks like this:
+
+.. code-block:: yaml
+
+datasets:
+  sample.coverage:
+    path: output/sample.coverage.tsv
+    separator: "\t"
+  sample.reference:
+    path: output/sample.reference.tsv
+    separator: "\t"
+  sample.reads:
+    path: output/sample.reads.tsv
+    separator: "\t"
+views:
+  sample:
+      datasets:
+          reads: sample.reads
+          reference: sample.reference
+          coverage: sample.coverage
+      render-plot:
+          spec-path: "output/sample.vl.json"
+
 
 Embedding in Snakemake
 ======================
