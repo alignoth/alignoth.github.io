@@ -92,7 +92,7 @@ The corresponding Conda environment definition:
       - conda-forge
       - bioconda
     dependencies:
-      - alignoth=0.16.4
+      - alignoth=1.1.2
 
 After your regular workflow execution the snakemake report can be generated via the following command:
 
