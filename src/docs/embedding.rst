@@ -4,9 +4,8 @@
 Embedding Alignoth Outputs
 **************************
 
-Alignoth produces fully self-contained HTML files that can be easily embedded into other reports and workflows.
-This allows users to integrate alignment visualizations directly into existing analysis pipelines, documentation,
-or automated reporting systems such as Snakemake or Datavzrd.
+Alignoth produces fully self-contained HTML files or Vega-Lite plots that can be easily embedded into other reports and workflows.
+This allows users to integrate alignment visualizations directly into existing analysis pipelines or tools such as Snakemake or Datavzrd.
 
 Below we demonstrate how to embed Alignoth visualizations within a Datavzrd and Snakemake report.  
 
