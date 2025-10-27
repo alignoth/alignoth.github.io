@@ -16,7 +16,7 @@ Embedding in Datavzrd
 `Datavzrd <https://datavzrd.github.io>`_ allows embedding Vega-Lite plots via its `render-plot` keyword.
 This enables embedding one or more Alignoth plots directly into a Datavzrd report.
 These views (e.g. per variant or gene of interest) can be linked to an overview table via Datavzrd's `linking feature <https://datavzrd.github.io/docs/configuration.html#links>`_.
-Technically embedding the alignment views can be achieved by calling Alignoth asking for a tsv formatted output using `-f tsv` and an output directory `-o output/` for the datasets and Vega-Lite spec files like this:
+Technically embedding the alignment views can be achieved by calling Alignoth asking for a tsv formatted output using ``-f tsv`` and an output directory ``-o output/`` for the datasets and Vega-Lite spec files like this:
 
 .. code-block:: bash
 
