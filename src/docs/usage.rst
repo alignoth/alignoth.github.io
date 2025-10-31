@@ -113,4 +113,8 @@ Arguments
      -
      - If present, the generated html will not embed javscript dependencies and therefore be considerably smaller but require internet access to load the dependencies.
      - false
+   * - around-vcf-record
+     -
+     - Plots a region around a specified VCF record taken via its index from the VCF file given via the --vcf option.
+     - 
 
