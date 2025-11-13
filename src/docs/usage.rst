@@ -117,4 +117,8 @@ Arguments
      -
      - Plots a region around a specified VCF record taken via its index from the VCF file given via the --vcf option.
      - 
+   * - mismatch-display-min-percent
+     -
+     - The generated coverage plot will only display mismatches with a minimum percentage of the total read depth.
+     - 1
 
