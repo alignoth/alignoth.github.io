@@ -32,6 +32,8 @@ hero:
   links: 
     - url: https://alignoth.github.io/preview.html
       text: Check Live Demo
+    - url: https://doi.org/10.1093/bioinformatics/btaf663
+      text: Read the paper
 
 features:
   - title: Portable and interactive alignment plots from bam files
