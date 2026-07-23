@@ -39,7 +39,7 @@ Arguments
      - default
    * - bam-path
      - -b
-     - The bam file to be visualized.
+     - BAM file(s) to be visualized. Multiple files can be given (e.g. ``-b a.bam -b b.bam``) and will be stacked in the resulting plot.
      -
    * - reference
      - -r
@@ -47,11 +47,11 @@ Arguments
      -
    * - region
      - -g
-     - Chromosome and region for the visualization. Example: 2:132424-132924
+     - Chromosome and region (1-based, fully inclusive) for the visualization. Example: 2:132424-132924
      -
    * - around
      - -a
-     - A chromosome and a base position that will define the region that will be plotted starting 500bp before and end 500bp behind the given position. Example: 2:17348
+     - A chromosome and a base position that will define the region that will be plotted starting 500bp before and end 500bp after the given position. Example: 2:20000
      -
    * - highlight
      - -h
@@ -59,15 +59,15 @@ Arguments
      -
    * - vcf
      - -v
-     - Path to a VCF file. Variants from the VCF file will be highlighted in the resulting plot similar to the highlight option.
+     - Path to a VCF file that will be used to highlight all variant positions located within the given region.
      -
    * - bed
-     - 
-     - Path to a BED file. Regions from the BED file will be highlighted in the resulting plot similar to the highlight option.
+     -
+     - Path to a BED file that will be used to highlight all BED records overlapping the given region.
      -
    * - plot-all
-     - -p
-     - Plot all reads in the given region. We advise to only use this command for small bam files with a single target.
+     -
+     - Plot the whole bam file(s) (no ``-g``/``-a`` needed). We advise to only use this option for small bam files, and it cannot be combined with multiple bam files that have different targets.
      - false
    * - max-read-depth
      - -d
@@ -75,11 +75,11 @@ Arguments
      - 500
    * - max-width
      - -w
-     - Set the maximum width of the resulting alignment plot
+     - Set the maximum width of the resulting alignment plot. Defaults to 1024, or to the available width when rendering to HTML.
      - 1024
    * - output
      - -o
-     - If present, data and vega-lite specs of the generated plot will be split and written to the given directory
+     - If present, data and vega-lite specs of the generated plot will be split and written to the given directory. Cannot be combined with any of the ``*-output`` options, ``--html`` or ``--no-embed-js``.
      -
    * - data-format
      - -f
@@ -101,9 +101,13 @@ Arguments
      -
      - If present reference data will be written to the given file path
      -
+   * - coverage-output
+     -
+     - If present coverage data will be written to the given file path
+     -
    * - highlight-data-output
      -
-     - If present highlight data will be written to the given file path
+     - If present highlight data will be written to the given file path. Requires ``--highlight`` to be set.
      -
    * - html
      -
@@ -111,14 +115,18 @@ Arguments
      -
    * - no-embed-js
      -
-     - If present, the generated html will not embed javscript dependencies and therefore be considerably smaller but require internet access to load the dependencies.
+     - If present, the generated html will not embed javascript dependencies and therefore be considerably smaller but require internet access to load the dependencies.
      - false
    * - around-vcf-record
      -
-     - Plots a region around a specified VCF record taken via its index from the VCF file given via the --vcf option.
-     - 
+     - Plots a region around a specified VCF record taken via its index (starting at 0) from the VCF file given via the ``--vcf`` option. Requires ``--vcf`` and cannot be combined with ``--region``, ``--around`` or ``--plot-all``.
+     -
    * - mismatch-display-min-percent
      -
      - The generated coverage plot will only display mismatches with a minimum percentage of the total read depth.
-     - 1
+     - 1.0
+   * - clamp-reads
+     -
+     - If set, reads are clamped to the boundaries of the specified region before processing.
+     - false
 
