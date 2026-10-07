@@ -55,7 +55,7 @@ Arguments
      -
    * - highlight
      - -h
-     - Named intervals or single base positions that will be highlighted in the visualization. Example: myinterval:132400-132500 or myvariant:132440
+     - Interval or single base position that will be highlighted in the visualization, optionally prefixed with a name. Example: 132440-132450, 132440, myinterval:132440-132450 or myvariant:132440
      -
    * - vcf
      - -v
