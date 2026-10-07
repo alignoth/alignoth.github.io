@@ -48,3 +48,4 @@ jobs:
         with:
           config: src/config.yaml
           path: build
+          token: ${{ secrets.GITHUB_TOKEN }}
