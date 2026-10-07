@@ -39,7 +39,7 @@ Arguments
      - default
    * - bam-path
      - -b
-     - BAM file(s) to be visualized. Multiple files can be given (e.g. ``-b a.bam -b b.bam``) and will be stacked in the resulting plot.
+     - BAM file(s) to be visualized. Accepts local paths or ``http(s)``/``ftp`` URLs like samtools. Remote files need a matching index (``.bai``/``.csi``). Multiple files can be given (e.g. ``-b a.bam -b b.bam``) and will be stacked in the resulting plot.
      -
    * - reference
      - -r
@@ -55,7 +55,7 @@ Arguments
      -
    * - highlight
      - -h
-     - Named intervals or single base positions that will be highlighted in the visualization. Example: myinterval:132400-132500 or myvariant:132440
+     - Interval or single base position that will be highlighted in the visualization, optionally prefixed with a name. Example: 132440-132450, 132440, myinterval:132440-132450 or myvariant:132440
      -
    * - vcf
      - -v
@@ -85,7 +85,7 @@ Arguments
      - -f
      - Sets the output format for the read, reference and highlight data
      - json
-   * - aux_tag
+   * - aux-tag
      - -x
      - Displays the given content of the aux tag in the tooltip of the plot. Multiple usage for more than one tag is possible.
      -
